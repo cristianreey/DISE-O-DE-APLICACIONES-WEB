@@ -1,0 +1,15 @@
+      /* Estilos para el cuerpo del documento */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            height: 3cm;
+            width: 3cm;
+            padding: 30px;
+            background-image: url('imagenes/imagen.jpg');
+            
+        }

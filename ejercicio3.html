@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Problema</title>
+    <link rel="StyleSheet" href="estilos.css" type="text/css">
+</head>
+<style>
+    #contenedorform {
+        width: 500px;
+        margin-left: 20px;
+        margin-top: 10px;
+        background-color: #ffe;
+        border: 1px solid #CCC;
+        padding: 10px 0 10px 0;
+    }
+
+    #contenedorform form label {
+        width: 120px;
+        float: left;
+        font-family: verdana;
+        font-size: 14px;
+    }
+
+    .botonsubmit {
+        color: #f00;
+        background-color: #bbb;
+        border: 1px solid #fff;
+    }
+</style>
+
+<body>
+    <div id="contenedorform">
+        <form method="post" action="#">
+            <label>Ingresenombre:</label>
+            <input type="text" name="nombre" size="30">
+            <br>
+            <label>Ingrese mail:</label>
+            <input type="text" name="mail" size="45">
+            <br>
+            <label>Comentarios:</label>
+            <text areaname="comentarios" cols="30" rows="5"></textarea>
+                <br>
+                <input class="botonsubmit" type="submit" value="confirmar">
+        </form>
+    </div>
+</body>
+
+</html>
