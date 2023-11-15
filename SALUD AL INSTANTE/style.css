@@ -9,7 +9,6 @@ body {
   padding: 0;
 }
 
-
 #contenedor {
   width: 100%;
   margin-bottom: 10vh;
@@ -65,7 +64,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 
 #principal p {
   font-size: 20px;
@@ -137,9 +135,8 @@ body {
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
-  bottom: 0px; 
+  bottom: 0px;
   width: 100%;
-
 }
 
 #iconoContacto {
@@ -214,8 +211,6 @@ td a:hover {
   color: #000000;
 }
 
-
-
 /**********************************************************************************************************************/
 /**PAGINA AREA PRIVADA**/
 
@@ -228,36 +223,32 @@ td a:hover {
 
 .contenedor-registro h1 {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 120px;
 }
-
 
 .contenedor-registro h2 {
   text-align: center;
   margin-top: 20px;
   font-weight: 500;
   margin-bottom: 0;
-
 }
 
 .contenedor-registro h4 {
   text-align: center;
   font-weight: 300;
   margin-top: 0;
-
 }
 
 .contenedor-registro form {
   text-align: center;
-  
 }
 
 .contenedor-registro form input {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   font-size: 17px;
   width: 320px;
   height: 40px;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .contenedor-registro input::placeholder {
@@ -274,7 +265,7 @@ td a:hover {
 }
 
 .boton1 {
-  background-color: #D04ED6;
+  background-color: #d04ed6;
   width: 200px;
   height: 50px;
   border-radius: 20px 20px;
@@ -283,17 +274,53 @@ td a:hover {
 }
 
 .boton2 {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   width: 200px;
   height: 50px;
   border-radius: 20px 20px;
   font-size: 16px;
 }
 
-.pie1sesion{
+.pie1sesion {
   position: fixed;
 }
-.pie2sesion{
+.pie2sesion {
   position: fixed;
 }
 
+.olvideContraseña p {
+  color: red;
+  margin-right: 180px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+/******************************************************************************************/
+/***PAGINA DE ALERGIAS*/
+
+.contenedor-servicios {
+  height: 90vh;
+  text-align: center;
+}
+
+.contenedor-servicios h1 {
+  margin-top: 120px;
+}
+
+.contenido-servicios {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenido-servicios form input {
+  width: 600px;
+  height: 50px;
+  margin-right: 600px;
+  margin-top: 100px;
+  border-radius: 40px;
+  font-size: 17px;
+}
+
+.contenido-servicios input[type="text"] {
+  padding-left: 10px;
+}
