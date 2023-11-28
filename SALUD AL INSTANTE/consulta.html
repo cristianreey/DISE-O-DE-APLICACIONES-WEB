@@ -6,6 +6,158 @@
     <title>Servicios | Alergías</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
+  <style>
+   body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #contenedor {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #cabecera {
+            background-color: #1fdec7;
+            width: 100%;
+            height: 12vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            position: fixed;
+            top: 0;
+            z-index: 99;
+        }
+
+        #logo img {
+            width: 190px;
+            height: auto;
+            margin-top: 15%;
+        }
+
+        #iconoHome,
+        #iconoServicios,
+        #iconoConsultas,
+        #iconoPerfil {
+            display: inline-flex;
+            vertical-align: 120%;
+        }
+
+        .menu-desplegable {
+            width: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1fdec7;
+            border-top: solid #000000;
+            z-index: 9;
+            overflow: hidden;
+            transition: width 0.9s ease-in-out;
+        }
+
+        #iconoServicios:hover .menu-desplegable,
+        #iconoConsultas:hover .menu-desplegable {
+            width: 100%;
+        }
+
+        .menu-desplegable {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        td a:hover {
+            background-color: #1fdec7;
+            color: #fff;
+        }
+
+        .menu-desplegable li {
+            padding: 10px;
+        }
+
+        .menu-desplegable a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: 400;
+            margin-left: 20px;
+            display: block;
+        }
+
+        .menu-desplegable a:hover {
+            background-color: #1fdec7;
+            color: #ffffff;
+        }
+
+        #contenido {
+            width: 100%;
+            height: calc(100% - 12vh);
+            margin-top: 12vh;
+        }
+
+        .contenedor-servicios {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 10px;
+            text-align: center;
+            padding-top: 1vh;
+            background-color: #fff;
+            height: 80%;
+        }
+
+        h1 {
+            grid-column: span 4;
+        }
+
+        .contenido-servicios form input {
+            width: 220%;
+            max-width: 900px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .fila1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .fila2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .foto-medico {
+            grid-column: 3;
+            justify-self: end;
+        }
+
+        .foto-medico img {
+            width: 100%;
+        }
+
+
+  </style>
   <body>
     <div id="contenedor">
         <div id="cabecera">
@@ -88,6 +240,9 @@
                 </div>
                 <div class="observacion">
                   <img src="imagenes/observation.png" alt="">
+                </div>
+                <div class="foto-medico">
+                  <img src="imagenes/image 4.png" alt="">
                 </div>
               </div>
 

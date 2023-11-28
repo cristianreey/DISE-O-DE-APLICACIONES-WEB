@@ -297,7 +297,6 @@ td a:hover {
 
 /******************************************************************************************/
 /***PAGINA DE ALERGIAS*/
-
 .contenedor-servicios {
   height: 90vh;
   text-align: center;
@@ -311,7 +310,7 @@ td a:hover {
   width: 600px;
   height: 50px;
   margin-right: 200px;
-  margin-top: 100px;
+  margin-top: 20px;
   border-radius: 40px;
   font-size: 17px;
 }
@@ -320,29 +319,41 @@ td a:hover {
   padding-left: 10px;
 }
 
-.fila1 {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-}
-.fila2 {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.calendario {
-  margin-left: 400px;
-  margin-top: 30px;
-}
-
-.observacion {
-  margin-left: 20px;
-  margin-top: 30px;
-}
-
 .textoDatos {
-  margin-right: 700px;
+  margin-top: 20px;
   font-size: 18px;
+}
+
+.contenido-servicios .fila1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contenido-servicios .fila1 img,
+.contenido-servicios .fila1 form {
+  margin-right: 20px;
+}
+
+.contenido-servicios .fila2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-servicios .calendario {
+  width: 119px;
+  height: 126px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+.contenido-servicios .observacion {
+  margin-left: 20px;
+  margin-top: -5px;
+}
+
+.contenido-servicios .foto-medico {
+  margin-left: 350px;
 }
