@@ -9,6 +9,9 @@ body {
   padding: 0;
 }
 
+.row {
+  display: flex;
+}
 #contenedor {
   width: 100%;
   margin-bottom: 10vh;
@@ -300,6 +303,11 @@ td a:hover {
 .contenedor-servicios {
   height: 90vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
 }
 
 .contenedor-servicios h1 {
@@ -333,13 +341,14 @@ td a:hover {
 
 .contenido-servicios .fila1 img,
 .contenido-servicios .fila1 form {
-  margin-right: 20px;
+  align-items: center;
 }
 
 .contenido-servicios .fila2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .contenido-servicios .calendario {
@@ -347,7 +356,6 @@ td a:hover {
   height: 126px;
   left: 0px;
   top: 0px;
-  position: absolute;
 }
 .contenido-servicios .observacion {
   margin-left: 20px;
@@ -356,4 +364,13 @@ td a:hover {
 
 .contenido-servicios .foto-medico {
   margin-left: 350px;
+}
+
+.iconos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 80px;
 }
