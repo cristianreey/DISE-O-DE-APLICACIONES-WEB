@@ -1,48 +1,38 @@
 <html>
-
-<head>
+  <head>
     <title>Problema</title>
-    <link rel="StyleSheet" href="estilos.css" type="text/css">
-</head>
-<style>
-    #contenedorform {
-        width: 500px;
-        margin-left: 20px;
-        margin-top: 10px;
-        background-color: #ffe;
-        border: 1px solid #CCC;
-        padding: 10px 0 10px 0;
+    <link rel="StyleSheet" href="estilos.css" type="text/css" />
+  </head>
+  <style>
+    .layout {
+      height: 400px;
+      width: 800px;
+      background: tomato;
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      grid-gap: 5px;
     }
-
-    #contenedorform form label {
-        width: 120px;
-        float: left;
-        font-family: verdana;
-        font-size: 14px;
+    .cell {
+      background-color: #c3c3c3;
+      color: #333;
+      border-radius: 3px;
+      padding: 20px;
+      font-size: 40px;
     }
+  </style>
 
-    .botonsubmit {
-        color: #f00;
-        background-color: #bbb;
-        border: 1px solid #fff;
-    }
-</style>
-
-<body>
-    <div id="contenedorform">
-        <form method="post" action="#">
-            <label>Ingresenombre:</label>
-            <input type="text" name="nombre" size="30">
-            <br>
-            <label>Ingrese mail:</label>
-            <input type="text" name="mail" size="45">
-            <br>
-            <label>Comentarios:</label>
-            <text areaname="comentarios" cols="30" rows="5"></textarea>
-                <br>
-                <input class="botonsubmit" type="submit" value="confirmar">
-        </form>
+  <body>
+    <div class="layout">
+      <div class="cell a">A</div>
+      <div class="cell b">B</div>
+      <div class="cell c">C</div>
+      <div class="cell d">D</div>
+      <div class="cell e">E</div>
+      <div class="cell f">F</div>
+      <div class="cell g">G</div>
+      <div class="cell h">H</div>
+      <div class="cell i">I</div>
     </div>
-</body>
-
+  </body>
 </html>
