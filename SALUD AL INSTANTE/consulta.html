@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Servicios | Alergías</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="script.js"></script>
   </head>
   <body>
     <div id="contenedor">
@@ -84,19 +87,30 @@
               <p class="textoDatos">Datos sobre el médico seleccionado:</p>
               <div class="fila2">
                 <div class="iconos">
-                <div class="calendario">
-                  <img src="imagenes/calendar.png" alt="">
+                    <div class="calendario" onclick="toggleCalendario()" data-tooltip="Haz clic para seleccionar una fecha">
+                        <img src="imagenes/calendar.png" alt="">
+                    </div>
+                    <div class="menu-desplegable-calendario">
+                    </div>
+                    <div class="observacion" data-tooltip="Haz clic para ver las observaciones">
+                        <img src="imagenes/observation.png" alt="">
+                    </div>
                 </div>
-                <div class="observacion">
-                  <img src="imagenes/observation.png" alt="">
-                </div>
-              </div>
+              <div class="iconos2">
                 <div class="foto-medico">
                   <img src="imagenes/image 4.png" alt="">
                 </div>
+            </div>
               </div>
 
             </div>
         </div>
+        
+<div id="calendario-container"></div>
+<div class="fecha-seleccionada"></div>
+<div class="confirmar-cita">
+    <button id="btnConfirmarCita">Confirmar Cita</button>
+  </div>
+
   </body>
 </html>

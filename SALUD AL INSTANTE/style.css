@@ -300,6 +300,7 @@ td a:hover {
 
 /******************************************************************************************/
 /***PAGINA DE ALERGIAS*/
+
 .contenedor-servicios {
   height: 90vh;
   text-align: center;
@@ -311,7 +312,7 @@ td a:hover {
 }
 
 .contenedor-servicios h1 {
-  margin-top: 120px;
+  margin-top: 185px;
 }
 
 .contenido-servicios form input {
@@ -320,7 +321,7 @@ td a:hover {
   margin-right: 200px;
   margin-top: 20px;
   border-radius: 40px;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .contenido-servicios input[type="text"] {
@@ -329,7 +330,7 @@ td a:hover {
 
 .textoDatos {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .contenido-servicios .fila1 {
@@ -349,6 +350,36 @@ td a:hover {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 40px;
+}
+
+/* Agrega esto al final de tu archivo style.css o en una nueva hoja de estilo */
+
+.calendario,
+.observacion {
+  position: relative;
+  cursor: pointer;
+}
+
+.calendario:hover::before,
+.observacion:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  display: none;
+  margin-top: 10px;
+}
+
+.calendario:hover::before,
+.observacion:hover::before {
+  display: block;
 }
 
 .contenido-servicios .calendario {
@@ -359,11 +390,15 @@ td a:hover {
 }
 .contenido-servicios .observacion {
   margin-left: 20px;
-  margin-top: -5px;
+  margin-top: 0px;
 }
 
 .contenido-servicios .foto-medico {
   margin-left: 350px;
+}
+
+.iconos2 {
+  width: 50%;
 }
 
 .iconos {
@@ -373,4 +408,64 @@ td a:hover {
   position: absolute;
   top: 0;
   left: 80px;
+  margin-top: 20px;
+}
+
+/* Agrega esto al final de tu archivo style.css o en una nueva hoja de estilo */
+.menu-desplegable-calendario {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu-desplegable-calendario ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-desplegable-calendario ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-desplegable-calendario ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.flatpickr-calendar {
+  position: absolute;
+  top: 0px;
+  margin-top: 20px;
+  left: 0;
+  z-index: 9999;
+}
+
+.fecha-seleccionada {
+  display: none;
+}
+
+.fecha-seleccionada.mostrar {
+  display: block;
+  position: absolute;
+  left: 22%;
+  font-size: 20px;
+  border: #d9d9d9 solid;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.confirmar-cita {
+  position: absolute;
+  left: 30%;
+}
+
+#btnConfirmarCita {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #1fdec7;
+  font-size: 17px;
 }
