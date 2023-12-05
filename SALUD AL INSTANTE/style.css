@@ -455,12 +455,14 @@ td a:hover {
   border: #d9d9d9 solid;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 20px;
+  top: 85%;
 }
 
 .confirmar-cita {
   position: absolute;
   left: 30%;
+  margin-top: 70px;
+  top: 85%;
 }
 
 #btnConfirmarCita {
@@ -468,4 +470,12 @@ td a:hover {
   border-radius: 20px;
   background-color: #1fdec7;
   font-size: 17px;
+}
+
+.btn-fecha {
+  width: 50px !important;
+  height: 40px !important;
+  color: rgb(0, 0, 0) !important;
+  text-align: center;
+  line-height: 28px;
 }
