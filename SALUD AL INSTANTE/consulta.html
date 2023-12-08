@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Servicios | Alergías</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" media="only screen and (max-width: 767px)" href="styleMobile.css" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="script.js"></script>
   </head>
   <style>
-    
+
   </style>
   <body>
     <div id="contenedor">
@@ -113,6 +114,47 @@
 <div class="fecha-seleccionada"></div>
 <div class="confirmar-cita">
     <button id="btnConfirmarCita">Confirmar Cita</button>
+  </div>
+  
+  
+  <div id="observaciones-container" class="menu-desplegable-observaciones">
+    <button id="btnAgregarObservacion" onclick="mostrarFormulario()">Añadir Observación</button>
+    <div id="formularioObservacion" style="display: none;">
+      <input type="text" id="nombreUsuario" placeholder="Nombre de Usuario" required>
+      <div class="valoracion">
+        <input type="radio" id="estrella5" name="valoracion" value="5">
+        <label for="estrella5">&#9733;</label>
+        <input type="radio" id="estrella4" name="valoracion" value="4">
+        <label for="estrella4">&#9733;</label>
+        <input type="radio" id="estrella3" name="valoracion" value="3">
+        <label for="estrella3">&#9733;</label>
+        <input type="radio" id="estrella2" name="valoracion" value="2">
+        <label for="estrella2">&#9733;</label>
+        <input type="radio" id="estrella1" name="valoracion" value="1">
+        <label for="estrella1">&#9733;</label>
+       </div>
+       <textarea id="textoObservacion" placeholder="Escribe tu observación"></textarea>
+    <button id="btnEnviarObservacion" onclick="enviarObservacion()">Enviar</button>
+  </div>
+    
+  </div>
+  
+</div>
+<div id="pie1">
+  <div id="iconoPie">
+    <img src="/SALUD AL INSTANTE/imagenes/instagram.png" alt="" />
+  </div>
+  <div id="iconoPie">
+    <img src="/SALUD AL INSTANTE/imagenes/twitter.png" alt="" />
+  </div>
+  <div id="iconoPie">
+    <img src="/SALUD AL INSTANTE/imagenes/facebook.png" alt="" />
+  </div>
+</div>
+<div id="pie2">
+  <div id="iconoContacto">
+    <img src="/SALUD AL INSTANTE/imagenes/contacts.png" alt="" />
+    <p id="sobreNosotros">SOBRE NOSOTROS</p>
   </div>
 </div>
   </body>
