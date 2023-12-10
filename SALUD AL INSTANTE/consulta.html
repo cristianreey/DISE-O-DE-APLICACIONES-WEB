@@ -5,12 +5,631 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Servicios | Alergías</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" media="only screen and (max-width: 767px)" href="styleMobile.css" type="text/css" />
+    <link rel="stylesheet" href="styleMobile.css" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="script.js"></script>
   </head>
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@media (min-width: 700px) {
+  body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+html,
+body {
+  font-family: "Manrope", sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#contenedor {
+  width: 100%;
+}
+
+#cabecera {
+  background-color: #1fdec7;
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+  #logo img {
+    width: 190px;
+    height: auto;
+    margin-top: 15%;
+  }
+
+  #inicio,
+  #consultas,
+  #servicios {
+    display: inline-flex;
+    vertical-align: 120%;
+  }
+
+  #perfil {
+    display: inline-flex;
+    vertical-align: 155%;
+    margin-right: 60px;
+  }
+
+  #contenido {
+  width: 100%;
+  min-height: calc(100vh - 160px); /* Ajusta el valor según sea necesario */
+}
+
+
+  #principal {
+    position: relative;
+    margin-top: 150px;
+    background-color: #000000;
+    width: 100%;
+    height: 30vh;
+    color: #ffffff;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #principal p {
+    font-size: 20px;
+    margin-left: 400px;
+    margin-right: 30px;
+  }
+
+  .imagenPortada1 {
+    position: absolute;
+    left: 50px;
+    width: auto;
+    height: 110%;
+    vertical-align: middle;
+    z-index: 2;
+  }
+
+  #secundario {
+    margin-top: 90px;
+    position: relative;
+    background-color: #1fdec7;
+    width: 100%;
+    height: 30vh;
+    color: #000000;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #secundario p {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 500px;
+  }
+
+  .imagenPortada2 {
+    position: absolute;
+    right: 50px;
+    width: auto;
+    height: 110%;
+    vertical-align: middle;
+    z-index: 2;
+  }
+
+/* Footer styles */
+#pie1, #pie2 {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  clear: both;
+}
+
+#iconoPie {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#iconoPie img {
+  width: 30px;
+}
+
+#iconoContacto {
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+#iconoContacto img {
+  height: 60px;
+}
+
+#sobreNosotros {
+  display: inline-flex;
+  margin-top: 20px;
+}
+
+  #iconoPie img {
+    width: 30px;
+  }
+
+  #iconoContacto img {
+    height: 60px;
+  }
+
+  #sobreNosotros {
+    display: inline-flex;
+    margin-top: 20px;
+  }
+
+  .menu-desplegable {
+    width: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1fdec7;
+    border-top: solid #000000;
+    z-index: 9;
+    overflow: hidden;
+    transition: width 0.9s ease-in-out;
+  }
+
+  #iconoServicios:hover .menu-desplegable,
+  #iconoConsultas:hover .menu-desplegable {
+    width: 100%;
+  }
+
+  .menu-desplegable {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 10px;
+  }
+
+  td {
+    padding: 10px;
+  }
+
+  td a:hover {
+    background-color: #1fdec7;
+    color: #fff;
+  }
+
+  .menu-desplegable li {
+    padding: 10px;
+  }
+
+  .menu-desplegable a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    margin-left: 20px;
+    display: block;
+  }
+
+  .menu-desplegable a:hover {
+    background-color: #1fdec7;
+    color: #ffffff;
+  }
+
+  #iconoPerfil a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  /**********************************************************************************************************************/
+  /**PAGINA AREA PRIVADA**/
+
+  .contenedor-registro {
+    height: 90vh;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 0;
+  }
+
+  .contenedor-registro h1 {
+    text-align: center;
+    margin-top: 120px;
+  }
+
+  .contenedor-registro h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  .contenedor-registro h4 {
+    text-align: center;
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  .contenedor-registro form {
+    text-align: center;
+  }
+
+  .contenedor-registro form input {
+    background-color: #fafafa;
+    font-size: 17px;
+    width: 320px;
+    height: 40px;
+    margin-top: 10px;
+  }
+
+  .contenedor-registro input::placeholder {
+    padding-left: 10px;
+  }
+
+  .contenedor-registro input[type="text"],
+  .contenedor-registro input[type="password"] {
+    padding-left: 10px;
+  }
+
+  .contenedor-registro form div button {
+    display: inline-block;
+  }
+
+  .boton1 {
+    background-color: #d04ed6;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .boton2 {
+    background-color: #d9d9d9;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px 20px;
+    font-size: 16px;
+  }
+
+  .pie1sesion {
+    position: fixed;
+  }
+  .pie2sesion {
+    position: fixed;
+  }
+
+  .olvideContraseña p {
+    color: red;
+    margin-right: 180px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  /******************************************************************************************/
+  /***PAGINA DE ALERGIAS*/
+
+  .contenedor-servicios {
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  position: relative; /* Se agrega posición relativa */
+}
+
+
+  .contenedor-servicios h1 {
+    margin-top: 185px;
+  }
+
+  .contenido-servicios form input {
+    width: 600px;
+    height: 50px;
+    margin-right: 200px;
+    margin-top: 20px;
+    border-radius: 40px;
+    font-size: 20px;
+  }
+
+  .contenido-servicios input[type="text"] {
+    padding-left: 10px;
+  }
+
+  .textoDatos {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .contenido-servicios .fila1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .contenido-servicios .fila1 img,
+  .contenido-servicios .fila1 form {
+    align-items: center;
+  }
+
+  .contenido-servicios .fila2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+  }
+
+  /* Agrega esto al final de tu archivo style.css o en una nueva hoja de estilo */
+
+  .calendario,
+  .observacion {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .calendario:hover::before,
+  .observacion:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    display: none;
+    margin-top: 10px;
+  }
+
+  .calendario:hover::before,
+  .observacion:hover::before {
+    display: block;
+  }
+
+  .contenido-servicios .calendario {
+    width: 119px;
+    height: 126px;
+    left: 0px;
+    top: 0px;
+  }
+  .contenido-servicios .observacion {
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+
+  .foto-medico img {
+  width: 350px; 
+  height: auto;
+}
+  .iconos2 {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+  .iconos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    margin-top: 20px;
+  }
+
+  /* Agrega esto al final de tu archivo style.css o en una nueva hoja de estilo */
+  .menu-desplegable-calendario,
+.menu-desplegable-observaciones {
+  position: absolute;
+  top: 100%; /* Posiciona el menú debajo del elemento padre */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.menu-desplegable-calendario ul,
+.menu-desplegable-observaciones ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+  .menu-desplegable-calendario ul li {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .menu-desplegable-calendario ul li:hover {
+    background-color: #f0f0f0;
+  }
+
+  .flatpickr-calendar {
+    position: absolute;
+    top: 0px;
+    margin-top: 20px;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .fecha-seleccionada {
+    display: none;
+  }
+
+  .fecha-seleccionada.mostrar {
+    display: block;
+    position: absolute;
+    left: 22%;
+    font-size: 20px;
+    border: #d9d9d9 solid;
+    padding: 10px;
+    border-radius: 10px;
+    top: 85%;
+  }
+
+  .confirmar-cita {
+    position: absolute;
+    left: 30%;
+    margin-top: 70px;
+    top: 85%;
+  }
+
+  #btnConfirmarCita {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #1fdec7;
+    font-size: 17px;
+  }
+
+  .btn-fecha {
+    width: 50px !important;
+    height: 40px !important;
+    color: rgb(0, 0, 0) !important;
+    text-align: center;
+    line-height: 28px;
+  }
+  .menu-desplegable-observaciones {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    width: 400px;
+  }
+
+  .menu-desplegable-observaciones p {
+    color: red;
+  }
+
+  .mostrar-observaciones {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    left: 22%;
+    border: #d9d9d9 solid;
+    padding: 10px;
+    border-radius: 10px;
+    top: 85%;
+  }
+
+  .div-observaciones {
+    width: 100%;
+    border: #d9d9d9 solid;
+    border-radius: 20px;
+  }
+
+  .div-observaciones p {
+    color: #000000;
+  }
+
+  .valoracion {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+  }
+
+  input[type="radio"]:checked ~ label,
+  input[type="radio"]:hover ~ label {
+    color: #ffd700;
+  }
+
+  #btnAgregarObservacion {
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  #formularioObservacion {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  #nombreUsuario,
+  #textoObservacion {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .valoracion {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .valoracion input[type="radio"] {
+    display: none;
+  }
+
+  .valoracion label {
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+  }
+
+  .valoracion input[type="radio"]:checked ~ label,
+  .valoracion input[type="radio"]:hover ~ label {
+    color: #ffd700;
+  }
+
+  #btnEnviarObservacion {
+    background-color: #1fdec7;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #btnEnviarObservacion:hover {
+    background-color: #177f72;
+  }
+
+  .div-observaciones {
+    margin-bottom: 10px;
+  }
+}
+
 
   </style>
   <body>
