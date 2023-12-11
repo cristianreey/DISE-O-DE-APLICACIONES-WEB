@@ -4,7 +4,7 @@
   html,
   body {
     font-family: "Manrope", sans-serif;
-    height: 90vh;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -15,7 +15,6 @@
   }
   #contenedor {
     width: 100%;
-    margin-bottom: 10vh;
   }
 
   #cabecera {
@@ -303,7 +302,7 @@
   /***PAGINA DE ALERGIAS*/
 
   .contenedor-servicios {
-    height: 90vh;
+    height: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -412,7 +411,6 @@
     margin-top: 20px;
   }
 
-  /* Agrega esto al final de tu archivo style.css o en una nueva hoja de estilo */
   .menu-desplegable-calendario {
     display: none;
     position: absolute;
@@ -485,9 +483,20 @@
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 2; /* Asegúrate de que el z-index sea mayor que el del pie de página */
     padding: 10px;
     width: 400px;
+    top: 100%; /* Ajusta la posición para que se abra hacia abajo */
+    left: 0; /* Ajusta la posición izquierda según sea necesario */
+  }
+
+  .iconos .observacion {
+    margin-left: 20px;
+    margin-top: 0px;
+    position: relative; /* Asegúrate de que el contenedor sea relativo */
+  }
+  .iconos .observacion:hover + .menu-desplegable-observaciones {
+    display: block;
   }
 
   .menu-desplegable-observaciones p {
@@ -502,7 +511,7 @@
     border: #d9d9d9 solid;
     padding: 10px;
     border-radius: 10px;
-    top: 85%;
+    top: 106%;
   }
 
   .div-observaciones {
@@ -602,4 +611,9 @@
   .div-observaciones {
     margin-bottom: 10px;
   }
+}
+.pies {
+  position: absolute; /* Cambiado a relativo */
+  width: 100%;
+  height: auto;
 }

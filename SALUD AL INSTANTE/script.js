@@ -107,3 +107,27 @@ function obtenerValoracion() {
 
   return valoracionSeleccionada;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuObservaciones = document.querySelector(".menu-desplegable-observaciones");
+  const pies = document.querySelector(".pies");
+
+  function ajustarPosicionMenu() {
+    const alturaMenu = menuObservaciones.offsetHeight;
+    const alturaPies = pies.offsetHeight;
+    const alturaVentana = window.innerHeight;
+
+    if (alturaMenu + alturaPies > alturaVentana) {
+      const nuevaAlturaMenu = alturaVentana - alturaPies;
+      menuObservaciones.style.maxHeight = nuevaAlturaMenu + "px";
+    } else {
+      menuObservaciones.style.maxHeight = "";
+    }
+  }
+
+  // Ajustar la posición del menú cuando la ventana cambia de tamaño
+  window.addEventListener("resize", ajustarPosicionMenu);
+
+  // Ajustar la posición inicial
+  ajustarPosicionMenu();
+});
