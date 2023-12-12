@@ -354,8 +354,6 @@
     margin-top: 40px;
   }
 
-  /* Agrega esto al final de tu archivo style.css o en una nueva hoja de estilo */
-
   .calendario,
   .observacion {
     position: relative;
@@ -381,6 +379,10 @@
   .calendario:hover::before,
   .observacion:hover::before {
     display: block;
+  }
+
+  .foto-medico1 {
+    display: none;
   }
 
   .calendario {
