@@ -10,9 +10,6 @@
     padding: 0;
   }
 
-  .row {
-    display: flex;
-  }
   #contenedor {
     width: 100%;
   }
@@ -625,6 +622,21 @@
   height: 24%;
 }
 
+#menuHamburguesa {
+  display: none;
+}
+
+#menuIcono {
+  display: none;
+  cursor: pointer;
+}
+
+#menu {
+  display: none;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
 @media (max-width: 1220px) {
   .fila2 {
     margin-right: 300px;
@@ -632,6 +644,11 @@
 
   .fila1 {
     margin-left: 100px;
+  }
+
+  .menu-desplegable-observaciones {
+    left: 40px;
+    width: 350px;
   }
 }
 
@@ -642,5 +659,17 @@
 
   .fila1 {
     margin-left: 200px;
+  }
+  #cabecera {
+    display: none;
+  }
+
+  #menuIcono {
+    display: block;
+  }
+
+  #menuHamburguesa:checked + #menu {
+    display: block;
+    background-color: #1fdec7;
   }
 }
