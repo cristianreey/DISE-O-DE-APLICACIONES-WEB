@@ -1,105 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <title>Area Privada | Inicio de Sesión</title>
-</head>
-<style>
-  
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styleMobile.css" />
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/lightbox-2.6.min.js"></script>
+    <title>Inicio</title>
+  </head>
+  <style></style>
 
-</style>
-<body>
-    <div id="contenedor">
-        <div id="cabecera">
-            <div id="logo">
-                <img src="/SALUD AL INSTANTE/imagenes/logo.png" alt="" />
-            </div>
-            <div id="iconoHome">
-                <img src="/SALUD AL INSTANTE/imagenes/home.png" alt="" />
-                <p id="inicio">INICIO</p>
-            </div>
-            <div id="iconoServicios">
-                <img src="/SALUD AL INSTANTE/imagenes/medical.png" alt="" />
-                <p id="servicios">SERVICIOS</p>
-                <div class="menu-desplegable">
-                    <table>
-                        <tr>
-                          <td><a href="#">ALERGÍAS</a></td>
-                          <td><a href="#">REUMATOLOGÍA</a></td>
-                          <td><a href="#">CARDIOLOGÍA</a></td>
-                          <td><a href="#">CIRUGÍA</a></td>
-                          <td><a href="#">DERMATOLOGÍA</a></td>
-                          <td><a href="#">DIGESTIVO</a></td>
-                        </tr>
-                        <tr>
-                          <td><a href="#">ENDOCRINOLOGÍA</a></td>
-                          <td><a href="#">GINECOLOGÍA</a></td>
-                          <td><a href="#">MEDICINA INTERNA</a></td>
-                          <td><a href="#">NEUROLOGÍA</a></td>
-                          <td><a href="#">NUTRICIÓN</a></td>
-                          <td><a href="#">ODONTOLOGÍA</a></td>
-                        </tr>
-                        <tr>
-                          <td><a href="#">OFTALMOLOGÍA</a></td>
-                          <td><a href="#">OTORRINOLARINGOLOGÍA</a></td>
-                          <td><a href="#">PEDIATRÍA</a></td>
-                          <td><a href="#">PSIQUIATRÍA</a></td>
-                          <td><a href="#">TRAUMATOLOGÍA</a></td>
-                        </tr>
-                        <tr>
-                          <td><a href="#">PERITACIONES MÉDICAS</a></td>
-                          <td><a href="#">PSICOLOGÍA</a></td>
-                          <td><a href="#">PODOLOGÍA</a></td>
-                          <td><a href="#">MEDICINA ESTÉTICA</a></td>
-                          <td><a href="#">UROLOGÍA</a></td>
-                        </tr>
-                      </table>
-                </div>
-            </div>
-            <div id="iconoConsultas">
-                <img src="/SALUD AL INSTANTE/imagenes/Group.png" alt="" />
-                <p id="consultas">CONSULTAS</p>
-                <div class="menu-desplegable">
-                    <ul>
-                        <li><a href="#">CONSULTAS REALIZADAS</a></li>
-                        <li><a href="#">CONSULTAS PENDIENTES</a></li>
-                        <li><a href="#">MIS RECETAS</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="iconoPerfil"><a href="login.html">
-                <img src="/SALUD AL INSTANTE/imagenes/profile-square.png" alt="" />
-                <p id="perfil">ÁREA PRIVADA</p>
-              </a></div>
+  <body>
+    <!-- Menú hamburguesa en la cabecera -->
+    <div id="cabeceraMovil">
+      <!-- Icono del menú hamburguesa -->
+      <label id="menuIcono" for="menuHamburguesa"><img src="imagenes/menu.png" alt="" /></label>
+
+      <div id="logoMobile">
+        <img src="/SALUD AL INSTANTE/imagenes/logo.png" alt="" />
+      </div>
+
+      <div id="iconoPerfilTablet">
+        <a href="login.html">
+          <img src="/SALUD AL INSTANTE/imagenes/profile-square.png" alt="" />
+        </a>
+      </div>
+
+      <!-- Menú hamburguesa oculto -->
+      <input type="checkbox" id="menuHamburguesa" />
+      <div id="menu">
+        <div id="iconoHomeTablet">
+          <a href="index.html" style="text-decoration: none; color: black;" ><img src="/SALUD AL INSTANTE/imagenes/home.png" alt="" />
+          <p id="inicio" >INICIO</p></a>
         </div>
+        <div id="iconoServiciosTablet">
+          <img src="/SALUD AL INSTANTE/imagenes/medical.png" alt="" />
+          <p id="servicios">SERVICIOS</p>
+          <div class="menu-desplegable">
+            <table>
+              <tr>
+                <td><a href="#">ALERGÍAS</a></td>
+                <td><a href="#">REUMATOLOGÍA</a></td>
+                <td><a href="#">CARDIOLOGÍA</a></td>
+                <td><a href="#">CIRUGÍA</a></td>
+                <td><a href="#">DERMATOLOGÍA</a></td>
+                <td><a href="#">DIGESTIVO</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">ENDOCRINOLOGÍA</a></td>
+                <td><a href="#">GINECOLOGÍA</a></td>
+                <td><a href="#">MEDICINA INTERNA</a></td>
+                <td><a href="#">NEUROLOGÍA</a></td>
+                <td><a href="#">NUTRICIÓN</a></td>
+                <td><a href="#">ODONTOLOGÍA</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">OFTALMOLOGÍA</a></td>
+                <td><a href="#">OTORRINOLARINGOLOGÍA</a></td>
+                <td><a href="#">PEDIATRÍA</a></td>
+                <td><a href="#">PSIQUIATRÍA</a></td>
+                <td><a href="#">TRAUMATOLOGÍA</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">PERITACIONES MÉDICAS</a></td>
+                <td><a href="#">PSICOLOGÍA</a></td>
+                <td><a href="#">PODOLOGÍA</a></td>
+                <td><a href="#">MEDICINA ESTÉTICA</a></td>
+                <td><a href="#">UROLOGÍA</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="iconoConsultasTablet">
+          <img src="/SALUD AL INSTANTE/imagenes/Group.png" alt="" />
+          <p id="consultas">CONSULTAS</p>
+          <div class="menu-desplegable">
+            <ul>
+              <li><a href="consultasRealizadas.html">CONSULTAS REALIZADAS</a></li>
+              <li><a href="consultasPendientes.html">CONSULTAS PENDIENTES</a></li>
+              <li><a href="misRecetas.html">MIS RECETAS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="iconoPerfilMobil">
+          <a href="login.html">
+            <img src="/SALUD AL INSTANTE/imagenes/profile-square.png" alt="" />
+            <p id="perfil">ÁREA PRIVADA</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="contenedor">
+      <div id="cabecera">
+        <div id="logo">
+          <img src="/SALUD AL INSTANTE/imagenes/logo.png" alt="" />
+        </div>
+        <div id="iconoHome">
+          <a href="index.html" style="text-decoration: none; color: black;" ><img src="/SALUD AL INSTANTE/imagenes/home.png" alt="" />
+          <p id="inicio" >INICIO</p></a>
+        </div>
+        <div id="iconoServicios">
+          <img src="/SALUD AL INSTANTE/imagenes/medical.png" alt="" />
+          <p id="servicios">SERVICIOS</p>
+          <div class="menu-desplegable">
+            <table>
+              <tr>
+                <td><a href="#">ALERGÍAS</a></td>
+                <td><a href="#">REUMATOLOGÍA</a></td>
+                <td><a href="#">CARDIOLOGÍA</a></td>
+                <td><a href="#">CIRUGÍA</a></td>
+                <td><a href="#">DERMATOLOGÍA</a></td>
+                <td><a href="#">DIGESTIVO</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">ENDOCRINOLOGÍA</a></td>
+                <td><a href="#">GINECOLOGÍA</a></td>
+                <td><a href="#">MEDICINA INTERNA</a></td>
+                <td><a href="#">NEUROLOGÍA</a></td>
+                <td><a href="#">NUTRICIÓN</a></td>
+                <td><a href="#">ODONTOLOGÍA</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">OFTALMOLOGÍA</a></td>
+                <td><a href="#">OTORRINOLARINGOLOGÍA</a></td>
+                <td><a href="#">PEDIATRÍA</a></td>
+                <td><a href="#">PSIQUIATRÍA</a></td>
+                <td><a href="#">TRAUMATOLOGÍA</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">PERITACIONES MÉDICAS</a></td>
+                <td><a href="#">PSICOLOGÍA</a></td>
+                <td><a href="#">PODOLOGÍA</a></td>
+                <td><a href="#">MEDICINA ESTÉTICA</a></td>
+                <td><a href="#">UROLOGÍA</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="iconoConsultas">
+          <img src="/SALUD AL INSTANTE/imagenes/Group.png" alt="" />
+          <p id="consultas">CONSULTAS</p>
+          <div class="menu-desplegable">
+            <ul>
+              <li><a href="consultasRealizadas.html">CONSULTAS REALIZADAS</a></li>
+              <li><a href="consultasPendientes.html">CONSULTAS PENDIENTES</a></li>
+              <li><a href="misRecetas.html">MIS RECETAS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="iconoPerfil">
+          <a href="login.html">
+            <img src="/SALUD AL INSTANTE/imagenes/profile-square.png" alt="" />
+            <p id="perfil">ÁREA PRIVADA</p>
+          </a>
+        </div>
+      </div>
         <div class="contenedor-registro">
             <h1>Área Privada</h1>
-            <h2>Si ya tienes cuenta</h2>
+            <h2>Iniciar Sesión</h2>
             <h4>Por favor, introduce tus credenciales</h4>
             <form>
-                <div class="contenedor-registro1">
-                    <input type="text" id="dni" name="dni" placeholder="Introduce tu DNI, NIF O NIE *" required>
+                <div class="contenedor-inicio2">
+                    <input type="text" id="nombre" name="nombre" placeholder="Introduce tu email o número de telefono" required>
                 </div>
 
-                <div class="contenedor-registro2">
+                <div class="contenedor-inicio3">
                     <input type="password" id="password" name="password" placeholder="Introduce tu contraseña *" required>
                 </div>
                 <div class="olvideContraseña">
                     <a href=""><p>Olvidé mi contraseña</p></a>
                 </div>
                 <div>
-                    <a href=""><button class="boton1" type="submit">Accede a tu cuenta</button></a>
+                    <a href=""><button class="boton1" type="submit" style="margin-bottom: 150px;">Accede a tu cuenta</button></a>
                 </div>
             </form>
-            <form action="registro.html" method="get"> 
-                <button class="boton2" type="submit">Regístrate</button>
-            </form>
         </div>
-        <div id="pie1" class="pie1sesion">
-            <div id="iconoPie">
+        <div id="pie1">
+            <div id="iconoPie" >
                 <img src="/SALUD AL INSTANTE/imagenes/instagram.png" alt="" />
             </div>
             <div id="iconoPie">
@@ -109,7 +188,7 @@
                 <img src="/SALUD AL INSTANTE/imagenes/facebook.png" alt="" />
             </div>
         </div>
-        <div id="pie2" class="pie2sesion">
+        <div id="pie2" >
             <div id="iconoContacto">
                 <img src="/SALUD AL INSTANTE/imagenes/contacts.png" alt="" />
                 <p id="sobreNosotros">SOBRE NOSOTROS</p>

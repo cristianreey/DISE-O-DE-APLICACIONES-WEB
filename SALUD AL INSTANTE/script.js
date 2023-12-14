@@ -131,3 +131,41 @@ document.addEventListener("DOMContentLoaded", function () {
   // Ajustar la posición inicial
   ajustarPosicionMenu();
 });
+
+/***************************************************** */
+const tabla = document.getElementById("tabla-citas");
+const selectorOrden = document.getElementById("selector-orden");
+
+// Añadir evento de clic a los encabezados para ordenar
+document.querySelectorAll("th").forEach((th) => {
+  th.addEventListener("click", () => ordenarTabla(th.getAttribute("data-columna")));
+});
+
+// Función para ordenar la tabla
+function ordenarTabla(columna) {
+  const filas = Array.from(tabla.rows).slice(1);
+  const orden = selectorOrden.value === "asc" ? 1 : -1;
+
+  filas.sort((a, b) => {
+    const textoA = a.cells[columna] + ": ".textContent.trim();
+    const textoB = b.cells[columna] + ": ".textContent.trim();
+
+    if (!isNaN(textoA) && !isNaN(textoB)) {
+      return (parseInt(textoA) - parseInt(textoB)) * orden;
+    } else {
+      return textoA.localeCompare(textoB) * orden;
+    }
+  });
+
+  // Limpiar y volver a agregar las filas ordenadas
+  tabla.tBodies[0].innerHTML = "";
+  filas.forEach((fila) => tabla.tBodies[0].appendChild(fila));
+}
+
+// Añadir evento de cambio al selector de orden
+selectorOrden.addEventListener("change", () =>
+  ordenarTabla(tabla.rows[0].querySelector(".sorting").getAttribute("data-columna"))
+);
+
+// Inicializar la tabla con la columna predeterminada para ordenar
+ordenarTabla(selectorOrden.value);
