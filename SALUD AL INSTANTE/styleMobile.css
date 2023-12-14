@@ -1,4 +1,4 @@
-@media (max-width: 920px) {
+@media (max-width: 960px) {
   html,
   body {
     font-family: "Manrope", sans-serif;
@@ -23,6 +23,11 @@
     height: 12%;
   }
 
+  #logoMobile {
+    display: block;
+    margin-top: 25px;
+  }
+
   #menu {
     display: none;
     position: absolute;
@@ -31,6 +36,24 @@
     background-color: #f1f1f1;
     width: 100%;
     padding: 0;
+  }
+
+  /* Agrega espacio a los iconos dentro del menú de hamburguesa */
+  #menuIcono img,
+  #iconoHomeTablet img,
+  #iconoServiciosTablet img,
+  #iconoConsultasTablet img,
+  #iconoPerfilMobil img {
+    margin-left: 10px;
+  }
+
+  /* También puedes aplicar un margen izquierdo a los textos correspondientes si es necesario */
+  #inicio,
+  #servicios,
+  #consultas,
+  #perfil {
+    margin-left: 10px;
+    color: #000000;
   }
 
   #iconoPerfilMobil {
@@ -68,7 +91,7 @@
   #contenido {
     width: 100%;
     height: 100%;
-    margin-top: 12vh; /* Ajusta el margen para dejar espacio para la cabecera */
+    margin-top: 12vh;
   }
 
   #principal,
@@ -202,7 +225,7 @@
   .contenedor-servicios {
     text-align: center;
     margin-top: 12vh;
-    padding: 20px;
+    margin-top: 0;
   }
 
   .fila1 img {
@@ -210,12 +233,12 @@
   }
 
   .contenedor-servicios form input {
-    width: 100%;
+    width: 90%;
     height: 40px;
     margin-top: 20px;
     border-radius: 20px;
-    font-size: 16px; /* Fixed font size */
-    display: flex; /* Use flexbox for centering */
+    font-size: 16px;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -543,19 +566,34 @@
 
 @media (max-width: 370px) {
   .menu-desplegable-calendario {
-    width: 5px; /* Ajusta el ancho del contenedor del calendario para pantallas pequeñas */
+    width: 5px;
   }
   .flatpickr-calendar {
     width: 5px;
   }
 }
 
-@media (max-width: 343px) {
+@media (max-width: 392px) {
   #iconoPerfilTablet {
     display: none;
   }
 
   #iconoPerfilMobil {
     display: block;
+  }
+  #logoMobile img {
+    width: 150px;
+  }
+
+  #menuIcono img {
+    width: 70px;
+  }
+
+  #menuIcono img,
+  #iconoHomeTablet img,
+  #iconoServiciosTablet img,
+  #iconoConsultasTablet img,
+  #iconoPerfilMobil img {
+    width: 60px;
   }
 }
