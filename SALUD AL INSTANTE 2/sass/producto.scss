@@ -1,0 +1,20 @@
+@use 'variables';
+
+header .header-inner {
+    background-color: variables.$colorPrincipal;
+}
+
+.price {
+    color: variables.$precio;
+}
+
+.product {
+    .item {
+        margin-bottom: 30px;
+    }
+}
+
+/* clase de bootstrap modificada */
+.nav-pills .nav-link.active {
+    background-color: #e8d6ff;
+  }

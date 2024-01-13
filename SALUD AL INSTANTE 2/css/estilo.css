@@ -1,0 +1,350 @@
+@charset "UTF-8";
+body {
+  font-family: "Montserrat" sans-serif;
+  overflow-x: hidden;
+}
+
+/* PORTADA WEB */
+.welcome-top {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .welcome-top {
+    text-align: unset !important;
+    width: 75%;
+    margin-top: 0px;
+  }
+}
+.content-banner {
+  color: black;
+  background-image: url(../assets/img/fondoTurquesa.jpg);
+  min-height: 400px;
+  height: 100%;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 8rem;
+}
+
+.banner-btn {
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 10px 0px;
+  font-size: 17px;
+  background-color: black;
+  display: inline-block;
+  color: #1fdec7;
+  transition: 0.4s;
+}
+
+.banner-btn:hover {
+  color: white;
+  background-color: purple;
+}
+
+/* FIN PORTADA WEB */
+section {
+  background-color: white;
+  padding: 3rem 0rem 3rem;
+}
+
+/* SLIDER */
+.slider-wrap {
+  width: 90%;
+  height: auto;
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.slider-inner {
+  display: flex;
+  justify-content: space-around;
+  width: 1800px;
+  display: flex;
+}
+
+.item p {
+  color: black;
+}
+
+.item-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  width: 250px;
+  height: 250px;
+}
+.item-img img {
+  transition: all 0.5s;
+}
+.item-img img:hover {
+  transform: scale(1.1);
+}
+
+.slider {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.slider::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+.slider::-webkit-scrollbar-track {
+  background-color: rgb(205, 205, 205);
+  outline: 1px solid rgb(205, 205, 205);
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background-color: black;
+  outline: 1px solid black;
+}
+
+/* FIN SLIDER */
+.founder {
+  filter: grayscale(100%);
+}
+
+.audio-div button {
+  background-color: #1fdec7;
+}
+
+header .header-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: transparent;
+  padding: 10px;
+}
+header .logo {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+header .nav-item .nav-link {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+header .nav-item .nav-link:hover,
+header .right-menu *:hover,
+header img.logo.img-fluid.w-100:hover {
+  color: purple;
+  text-shadow: 0px 0px 1px;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+header .material-icons {
+  color: black;
+}
+header .navbar-scroll {
+  background-color: #1fdec7;
+  padding: 10px;
+  position: fixed;
+  box-shadow: 0px 1px 10px black;
+  transition-duration: 0.6s;
+}
+header .navbar-toggler {
+  padding: 0px;
+  border: none;
+}
+header .navbar-scroll .logo {
+  color: black;
+  font-weight: 500;
+}
+@media (max-width: 1100px) {
+  header .nav-item .nav-link {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991.5px) {
+  header .right-menu {
+    order: 2;
+  }
+  header .navbar-collapse {
+    order: 3;
+  }
+  header .nav-item .nav-link {
+    background-color: #1fdec7;
+    text-align: center;
+    padding: 0px;
+    margin: 8px 0px;
+  }
+  header .collapse {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+  header .nav-item {
+    border-top: solid 1px rgb(205, 205, 205);
+  }
+  header .nav-item:first-child {
+    border-top: none;
+  }
+  header .navbar-nav {
+    background-color: #1fdec7;
+    padding: 0px 30px;
+  }
+}
+
+.formularioVenta {
+  background-color: #e8d6ff;
+  padding: 30px 0px;
+  /* color para los span */
+  /* margen arriba y abajo para los p */
+}
+.formularioVenta input:hover,
+.formularioVenta textarea:hover {
+  background-color: #f2f2f2;
+  transition: 0.3s;
+}
+.formularioVenta input[type=submit]:hover {
+  background-color: black;
+  color: white;
+  transition: 0.4s;
+}
+.formularioVenta span {
+  color: red;
+}
+.formularioVenta p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.col-md-6 div p:first-child {
+  color: gray;
+}
+
+.redes-sociales > * {
+  background-color: #e8d6ff;
+  margin-right: 5px;
+  -webkit-clip-path: circle(40% at 50% 50%);
+          clip-path: circle(40% at 50% 50%);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 10px solid #e8d6ff;
+  color: black;
+}
+
+/* atributos para el contenedor principal */
+.formulario {
+  width: 100%;
+  background-color: #e8d6ff;
+  padding: 0px 45px;
+  font-family: "Alata";
+  margin: 0 auto;
+}
+
+/* color específico para la clase parrafo */
+.parrafo {
+  color: gray;
+}
+
+/* modificamos un poco la clase bootstrap de los inputs */
+.form-control {
+  margin-top: 5px;
+  box-shadow: inset 0 0 3px 0px #888;
+  border: 1px solid black;
+}
+
+/* textarea que no se pueda modificar el tamaño */
+textarea {
+  resize: none;
+}
+
+/* atributos para el input enviar */
+input[type=submit] {
+  margin: 20px 0px;
+  font-size: 25px;
+  box-shadow: none;
+  background-color: white;
+}
+
+.boletin {
+  font-family: "Alata";
+}
+.boletin input[type=text] {
+  background-color: rgb(244, 244, 244);
+  border: 2px solid rgb(233, 233, 233);
+  box-shadow: none;
+  line-height: 2.5;
+}
+.boletin input[type=submit] {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: none;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  font-size: 17px;
+  line-height: 2.5;
+}
+.boletin form div {
+  padding: 10px 10px;
+}
+.boletin input[type=submit]:hover {
+  background-color: #e8d6ff;
+  transition: 0.4s;
+}
+
+input#newsletter:hover {
+  box-shadow: 0px 1px 4px 1px black;
+  transition: 0.4s;
+}
+
+input#newsletter:focus {
+  box-shadow: 0px 1px 4px 1px black;
+}
+
+.inscribir {
+  border-left: 2px solid rgb(205, 205, 205);
+}
+
+@media (max-width: 1200px) {
+  .inscribir {
+    border-top: 2px solid rgb(205, 205, 205);
+    border-left: none;
+  }
+}
+footer {
+  background-color: black;
+  color: #1fdec7;
+  padding: 40px 30px;
+  font-family: "Alata";
+}
+footer .col-6 div {
+  margin-top: 20px;
+}
+footer a {
+  color: #1fdec7;
+  text-decoration: none;
+}
+footer a:hover {
+  color: purple;
+}
+footer div:first-child div:nth-child(3),
+footer div:first-child div:nth-child(4) {
+  margin: 15px 0px;
+}
+@media (max-width: 360px) {
+  footer div {
+    font-size: 10px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=estilo.css.map */

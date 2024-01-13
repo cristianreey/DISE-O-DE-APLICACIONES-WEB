@@ -1,0 +1,43 @@
+@use 'variables';
+
+.nav-item .activeCategorie {
+    color: variables.$morado;
+}
+
+.categories {
+    .row {
+        margin: 10px;
+    }
+
+    .item-img {
+        width: 80%;
+        height: auto;
+        margin: 0px auto;
+    }
+
+    .item {
+        .banner-btn,
+        .info {
+            margin-top: 0px;
+        }
+    }
+
+    .titulo {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    @media (min-width: 576px) {
+        .col-sm-6 {
+            flex: 0 0 auto;
+            width: 35%;
+            margin: 0px 40px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .col-sm-6 .item {
+            margin: 10px 15px 50px 15px;
+        }
+    }
+}

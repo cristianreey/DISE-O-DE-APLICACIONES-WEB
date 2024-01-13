@@ -1,0 +1,15 @@
+@use "variables";
+
+header .header-inner {
+    background-color: variables.$colorPrincipal;
+}
+
+.price {
+    color: variables.$precio;
+}
+
+.carro {
+    .item {
+        margin-bottom: 30px;
+    }
+}

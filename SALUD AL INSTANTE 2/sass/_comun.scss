@@ -1,0 +1,115 @@
+body {
+  font-family: "Montserrat" sans-serif;
+  overflow-x: hidden;
+}
+
+/* PORTADA WEB */
+
+.welcome-top {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .welcome-top {
+    text-align: unset !important;
+    width: 75%;
+    margin-top: 0px;
+  }
+}
+
+.content-banner {
+  color: $negro;
+  background-image: url(../assets/img/fondoTurquesa.jpg);
+  min-height: 400px;
+  height: 100%;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 8rem;
+}
+
+.banner-btn {
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 10px 0px;
+  font-size: 17px;
+  background-color: $negro;
+  display: inline-block;
+  color: $colorPrincipal;
+  @include transition(0.4s);
+}
+
+.banner-btn:hover {
+  color: $blanco;
+  background-color: $morado;
+}
+
+/* FIN PORTADA WEB */
+
+section {
+  background-color: $blanco;
+  padding: 3rem 0rem 3rem;
+}
+
+/* SLIDER */
+.slider-wrap {
+  width: 90%;
+  height: auto;
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.slider-inner {
+  display: flex;
+  justify-content: space-around;
+  width: 1800px;
+  display: flex;
+  align-items: center;
+}
+
+.item p {
+  color: $negro;
+}
+
+.item-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $blanco;
+  @include border-radius(10px);
+  @include size(250px, 250px);
+
+  img {
+    @include transition(all 0.5s);
+  }
+
+  img:hover {
+    @include transform(scale(1.1));
+  }
+}
+
+.slider {
+  overflow-x: auto;
+  overflow-y: hidden;
+  user-select: none;
+}
+
+.slider::-webkit-scrollbar {
+  @include size(5px, 8px);
+}
+
+.slider::-webkit-scrollbar-track {
+  background-color: $grisDiferente;
+  outline: 1px solid $grisDiferente;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background-color: $negro;
+  outline: 1px solid $negro;
+}
+
+/* FIN SLIDER */
