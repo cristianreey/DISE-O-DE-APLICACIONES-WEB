@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios</title>
+  <title>Consultas</title>
 
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -17,6 +17,106 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
+
+<style>
+#content-consult{
+  background-color: #f8f8f8; 
+  padding: 20px; 
+  margin-top: 20px; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#content-consult1{
+  background-color: #f8f8f8; 
+  padding: 20px; 
+  margin-top: 20px; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.citasMobile {
+  width: 100%; 
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+h2 {
+  color: #333; 
+  font-size: 24px; 
+  margin-bottom: 15px;
+  margin-top: 5px; 
+}
+
+.cita {
+    background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.fecha-hora,
+.medico,
+.especialidad {
+  margin: 8px 0;
+  color: #555; 
+}
+
+.videoconsulta {
+  margin-top: 8px; 
+}
+
+.videoconsulta img {
+  width: 30px; 
+  height: 30px;
+  margin-right: 8px; 
+}
+
+.receta {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.receta .medicamento,
+.receta .medico,
+.receta .periodo,
+.receta .pautas {
+  margin: 8px 0;
+  color: #333;
+}
+
+.receta .descargar {
+  margin-top: 8px;
+}
+
+.receta img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+/* Hover effect */
+.receta:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+</style>
 
 <body>
   <!-- EMPIEZA HEADER -->
@@ -36,7 +136,7 @@
                 <a class="nav-link" href="servicios.html">Servicios</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Consultas</a>
+                <a class="nav-link" href="consultas.html">Consultas</a>
               </li>
               </li>
               <li class="nav-item">
@@ -87,16 +187,16 @@
                   letter-spacing: -2px;
                   font-size: calc(1.525rem + 2.5vw);
                 ">
-              Servicios
+              Consultas
             </h1>
             <p style="font-weight: 500; font-size: calc(0.7rem + 0.5vw)">
-              Elige la especialidad de tu consulta.</p>
+              Consulta aquí tus consultas <b>pendientes</b>, <b>realizadas</b> y <b>tus recetas</b>.</p>
           </div>
         </div>
         <div class="col-md-6 order-1">
           <div>
             <picture>
-              <source srcset="assets/img/fotomedicos.avif" type="image/png" />
+          <source srcset="assets/img/fotomedicos.avif" type="image/png" />
               <img src="assets/img/fotomedicos.avif" alt="indeximg" class="m-auto d-block w-auto" style=" -webkit-box-shadow: 5px 5px 40px 30px rgba(139,139,139,0.7), inset 0px 0px 0px 46px rgba(139,139,139,0.64); 
               box-shadow: 5px 5px 40px 30px #64c6c7, inset 0px 0px 0px 46px rgba(139,139,139,0.64);"/>
             </picture>
@@ -107,62 +207,29 @@
   </section>
   <!-- ACABA PORTADA -->
 
-  <!-- EMPIEZA LA INFORMACION A RELLENAR DE LA CONSULTA -->
+  <!-- EMPIEZA LA ELECCIÓN DE LAS CONSULTAS -->
   <section data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
     <div class="row m-0 align-items-center">
       <div class="col-md-8">
         <div class="row">
           <div class="col-lg-5 mh-50 text-center font-weight-bold display-5 m-auto"
             style="font-size: calc(0.725rem + 1.7vw)">
-            <p>Rellena los datos de tu consulta:</p>
+            <p>¿QUÉ QUIERES CONSULTAR?</p>
           </div>
           <div class="col-lg-7 mh-50 m-auto " style="font-size: calc(0.725rem + 0.3vw)">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Especialidades</option>
-                <option value="1">Alergías</option>
-                <option value="2">Cardiología</option>
-                <option value="3">Dermatología</option>
-                <option value="4">Digestivo</option>
-                <option value="5">Endocrinología</option>
-                <option value="6">Ginecología</option>
-                <option value="7">Medicina Interna</option>
-                <option value="8">Neurología</option>
-                <option value="9">Nutrición</option>
-                <option value="10">Odontología</option>
-                <option value="11">Oftalmología</option>
-                <option value="12">Otorrinolaringología</option>
-                <option value="13">Pediatría</option>
-                <option value="14">Psiquiatría</option>
-                <option value="15">Traumatología</option>
-                <option value="16">Peritaciones Médicas</option>
-                <option value="17">Psicología</option>
-                <option value="18">Podología</option>
-                <option value="19">Medicina Estética</option>
-                <option value="20">Urología</option>
-              </select>
-              <hr>
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Doctores</option>
-                <option value="1">Miguel Ramirez</option>
-                <option value="2">Moises Moreno</option>
-                <option value="3">Diego Armando</option>
-                <option value="3">Fernando Guerrero</option>
-                <option value="3">Sofia Lopez</option>
-                <option value="3">Alba Caraballo</option>
-              </select>
+
+            <input type="checkbox" class="btn-check" id="btn-check1" autocomplete="off">
+            <label class="btn btn-outline-dark" for="btn-check1">Consultas Realizadas</label>
 
               <hr>
 
-              <div>
-                <div>
-                    <input type="datetime-local" class="form-control" name="cita">
-              </div>
-              </div>
+              <input type="checkbox" class="btn-check" id="btn-check2" autocomplete="off">
+              <label class="btn btn-outline-dark" for="btn-check2">Consultas Pendientes</label>
 
-              <div>
-               <!-- input enviar -->
-                <input class="boton1 form-control" type="submit" value="CONFIRMAR CITA" />
-            </div>
+              <hr>
+
+              <input type="checkbox" class="btn-check" id="btn-check3" autocomplete="off">
+              <label class="btn btn-outline-dark" for="btn-check3">Tus recetas</label>
           </div>
           
         </div>
@@ -171,7 +238,66 @@
       <div class="col-md-4 mh-50 founder">
         <img src="assets/img/fotoMedicos.jpg" alt="fotoMedicos" class="m-auto d-block img-fluid rounded" />
       </div>
+
+      <div class="content-consult" id="content-consult">
+        <div class="citasMobile">
+            <h2>Citas Médicas</h2>
+          
+            <div class="cita">
+              <div class="fecha-hora">Fecha1/Hora1</div>
+              <div class="medico">Médico1</div>
+              <div class="especialidad">Especialidad1</div>
+              <div class="videoconsulta"><img src="assets/img/video.png" alt=""></div>
+            </div>
+          
+            <div class="cita">
+              <div class="fecha-hora">Fecha2/Hora2</div>
+              <div class="medico">Médico2</div>
+              <div class="especialidad">Especialidad2</div>
+              <div class="videoconsulta"><img src="assets/img/video.png" alt=""></div>
+          
+            </div>
+          
+            <div class="cita">
+              <div class="fecha-hora">Fecha3/Hora3</div>
+              <div class="medico">Médico3</div>
+              <div class="especialidad">Especialidad3</div>
+              <div class="videoconsulta"><img src="assets/img/video.png" alt=""></div>
+            </div>
+      </div>
     </div>
+      <div class="content-consult1" id="content-consult1">
+      <div class="citasMobile">
+        <h2>Recetas</h2>
+      
+        <div class="receta">
+          <div class="medicamento">Medicamento</div>
+          <div class="medico">Médico</div>
+          <div class="periodo">Periodo</div>
+          <div class="pautas">Pautas</div>
+          <div class="descargar"><img src="assets/img/download.png" alt=""></div>
+        </div>
+      
+        <div class="receta">
+          <div class="medicamento">Medicamento</div>
+          <div class="medico">Médico</div>
+          <div class="periodo">Periodo</div>
+          <div class="pautas">Pautas</div>
+          <div class="descargar"><img src="assets/img/download.png" alt=""></div>
+        </div>
+      
+        <div class="receta">
+          <div class="medicamento">Medicamento</div>
+          <div class="medico">Médico</div>
+          <div class="periodo">Periodo</div>
+          <div class="pautas">Pautas</div>
+          <div class="descargar"><img src="assets/img/download.png" alt=""></div>
+        </div>
+        
+    </div>
+      </div>
+    <script src="js/consultas.js"></script>
+    
   </section>
   <!-- ACABA SOBRE NOSOTROS -->
 
@@ -306,8 +432,6 @@
           </div>
         </div>
       </div>
-
-
 
       <div class="col-md-6 d-flex justify-content-center">
         <div>
