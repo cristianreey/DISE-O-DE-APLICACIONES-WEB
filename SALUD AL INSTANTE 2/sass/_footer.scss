@@ -1,4 +1,4 @@
-.formularioVenta {
+.formulario {
   background-color: #80d0d1;
   padding: 30px 0px;
 
@@ -11,6 +11,10 @@
   input[type="submit"]:hover {
     background-color: black;
     color: white;
+    @include transition(0.4s);
+  }
+
+  button[type="submit"]:hover {
     @include transition(0.4s);
   }
 
