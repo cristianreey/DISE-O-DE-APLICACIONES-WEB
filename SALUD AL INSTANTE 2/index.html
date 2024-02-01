@@ -86,6 +86,19 @@
         right: 10px;
         cursor: pointer;
         }
+        .reproductor {
+          display: flex;
+          justify-content: center; 
+          align-items: center;
+          margin-bottom:inherit; 
+          clear:left; 
+          position:realtive;
+          gap: 5px;
+        }
+
+        .reproductor img{
+          width: 5%;
+        }
 </style>
 
 <body>
@@ -217,6 +230,17 @@
               clase. ¡Únete a nosotros en este viaje hacia una atención médica más accesible,
               eficiente y personalizada!
             </p>
+
+<!-- EMPIEZA REPRODUCTOR DE AUDIO -->
+<div class="reproductor">  <audio id="player">  <source src="assets/audio/descripcion.mp3" type="audio/mpeg" />  
+</audio>  
+<img src="assets/img/play_arrow_black_24dp.svg" onClick="document.getElementById('player').  play() "></img>  
+<img src="assets/img/pause_black_24dp.svg" onClick="document.getElementById('player').  pause() "></img>  
+<img src="assets/img/volume_up_black_24dp.svg" onClick="document.getElementById('player').  volume+=O.l"> </img>  
+<img src="assets/img/volume_down_black_24dp.svg" onClick="document.getElementById('player').  volume-=O.l"> </img>  </div>  
+
+<!-- ACABA REPRODUCTOR DE AUDIO -->
+
 
           </div>
         </div>
