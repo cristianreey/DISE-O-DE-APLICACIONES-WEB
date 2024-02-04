@@ -86,6 +86,19 @@
         right: 10px;
         cursor: pointer;
         }
+        .reproductor {
+          display: flex;
+          justify-content: center; 
+          align-items: center;
+          margin-bottom:inherit; 
+          clear:left; 
+          position:realtive;
+          gap: 5px;
+        }
+
+        .reproductor img{
+          width: 5%;
+        }
 </style>
 
 <body>
@@ -218,6 +231,17 @@
               eficiente y personalizada!
             </p>
 
+<!-- EMPIEZA REPRODUCTOR DE AUDIO -->
+<div class="reproductor">  <audio id="player">  <source src="assets/audio/descripcion.mp3" type="audio/mpeg" />  
+</audio>  
+<img src="assets/img/play_arrow_black_24dp.svg" onClick="document.getElementById('player').  play() "></img>  
+<img src="assets/img/pause_black_24dp.svg" onClick="document.getElementById('player').  pause() "></img>  
+<img src="assets/img/volume_up_black_24dp.svg" onClick="document.getElementById('player').  volume+=O.l"> </img>  
+<img src="assets/img/volume_down_black_24dp.svg" onClick="document.getElementById('player').  volume-=O.l"> </img>  </div>  
+
+<!-- ACABA REPRODUCTOR DE AUDIO -->
+
+
           </div>
         </div>
       </div>
@@ -254,7 +278,7 @@
                   <div class="item-img">
                     <img src="assets/img/fotor-ai-20240114185845-removebg-preview.png" alt="medico" class="w-100" />
                   </div>
-                  <p class="fw-bold fs-4">Miguel Ramirez</p>
+                  <p class="fw-bold fs-4">Miguel Crespo</p>
                 </a>
               </div>
               <div class="item">
