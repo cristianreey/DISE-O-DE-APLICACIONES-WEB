@@ -18,122 +18,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 
-<style>
-       
-        #register-container {
-            max-width: 300px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4cacb3;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.4s ease;
-        }
-
-        button:hover {
-            background-color: #000000;
-        }
-
-        #login-link {
-            color: #007BFF;
-            text-decoration: none;
-            display: block;
-            margin-top: 10px;
-        }
-
-        #login-link:hover{
-            color:#000000;
-        }
-
-        #search-menu-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7); 
-        z-index: 999; 
-        }
-
-        #search-menu {
-        padding: 20px;
-        color: #fff;
-        }
-
-        #search-menu-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 999;
-        }
-
-        #search-menu {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        }
-
-        #search-menu input {
-        width: 80%;
-        padding: 10px;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-        }
-
-        #search-menu button {
-        width: 80%;
-        padding: 10px;
-        background-color: #4cacb3;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.4s ease;
-        }
-
-        #search-menu button:hover {
-        background-color: #000000;
-        }
-
-        #close-search-menu {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        }
-
-</style>
-
 <body>
   <!-- EMPIEZA HEADER -->
   <header>
@@ -160,6 +44,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#help">Ayuda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="observaciones.html">Observaciones</a>
               </li>
             </ul>
           </div>
@@ -225,7 +112,7 @@
             <picture>
           <source srcset="assets/img/fotomedicos.avif" type="image/png" />
               <img src="assets/img/fotomedicos.avif" alt="indeximg" class="m-auto d-block w-100" style=" -webkit-box-shadow: 5px 5px 40px 30px rgba(139,139,139,0.7), inset 0px 0px 0px 46px rgba(139,139,139,0.64); 
-              box-shadow: 5px 5px 40px 30px #64c6c7, inset 0px 0px 0px 46px rgba(139,139,139,0.64);"/>
+              box-shadow: 5px 5px 40px 0px #64c6c7, inset 0px 0px 0px 46px rgba(139,139,139,0.64);"/>
             </picture>
           </div>
         </div>

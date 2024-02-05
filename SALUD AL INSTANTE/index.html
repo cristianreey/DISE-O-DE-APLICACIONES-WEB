@@ -17,90 +17,6 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
-
-<style>
-   #search-menu-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7); 
-        z-index: 999; 
-        }
-
-        #search-menu {
-        padding: 20px;
-        color: #fff;
-        }
-
-        #search-menu-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 999;
-        }
-
-        #search-menu {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        }
-
-        #search-menu input {
-        width: 80%;
-        padding: 10px;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-        }
-
-        #search-menu button {
-        width: 80%;
-        padding: 10px;
-        background-color: #4cacb3;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.4s ease;
-        }
-
-        #search-menu button:hover {
-        background-color: #000000;
-        }
-
-        #close-search-menu {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        }
-        .reproductor {
-          display: flex;
-          justify-content: center; 
-          align-items: center;
-          margin-bottom:inherit; 
-          clear:left; 
-          position:realtive;
-          gap: 5px;
-        }
-
-        .reproductor img{
-          width: 5%;
-        }
-</style>
-
 <body>
   <!-- EMPIEZA HEADER  -->
   <header>
@@ -127,6 +43,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#help">Ayuda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="observaciones.html">Observaciones</a>
               </li>
             </ul>
           </div>
@@ -192,7 +111,7 @@
             <picture>
               <source srcset="assets/img/fotomedicos.avif" type="image/png" />
               <img src="assets/img/fotomedicos.avif" alt="indeximg" class="m-auto d-block w-100" style=" -webkit-box-shadow: 5px 5px 40px 30px rgba(139,139,139,0.7), inset 0px 0px 0px 46px rgba(139,139,139,0.64); 
-              box-shadow: 5px 5px 40px 30px #64c6c7, inset 0px 0px 0px 46px rgba(139,139,139,0.64);"/>
+              box-shadow: 5px 5px 40px 0px #64c6c7, inset 0px 0px 0px 46px rgba(139,139,139,0.64);"/>
             </picture>
           </div>
         </div>
@@ -240,8 +159,6 @@
 <img src="assets/img/volume_down_black_24dp.svg" onClick="document.getElementById('player').  volume-=O.l"> </img>  </div>  
 
 <!-- ACABA REPRODUCTOR DE AUDIO -->
-
-
           </div>
         </div>
       </div>
@@ -254,79 +171,9 @@
   <!-- ACABA SOBRE NOSOTROS -->
 
   <!-- EMPIEZA PRIMER SLIDER -->
-  <section data-aos="zoom-in-up">
-    <div class="row m-0">
-      <div class="col-12 text-center">
-        <p style="
-              font-weight: 700;
-              letter-spacing: -2px;
-              font-size: calc(1.525rem + 2.5vw);
-              padding-bottom: 20px;
-            ">
-          Nuestros Médicos Más Solicitados
-        </p>
-      </div>
-    </div>
-
-    <div class="row m-0">
-      <div class="col-12">
-        <div class="slider-wrap m-auto">
-          <div class="slider firstSlider">
-            <div class="slider-inner">
-              <div class="item">
-                <a href="#" class="text-decoration-none">
-                  <div class="item-img">
-                    <img src="assets/img/fotor-ai-20240114185845-removebg-preview.png" alt="medico" class="w-100" />
-                  </div>
-                  <p class="fw-bold fs-4">Miguel Crespo</p>
-                </a>
-              </div>
-              <div class="item">
-                <a href="#" class="text-decoration-none">
-                  <div class="item-img">
-                    <img src="assets/img/fotor-ai-20240114185914-removebg-preview.png" alt="medico" class="w-100" />
-                  </div>
-                  <p class="fw-bold fs-4">Moises Moreno</p>
-                </a>
-              </div>
-              <div class="item">
-                <a href="#" class="text-decoration-none">
-                  <div class="item-img">
-                    <img src="assets/img/fotor-ai-20240114185845-removebg-preview.png" alt="medico" class="w-100" />
-                  </div>
-                  <p class="fw-bold fs-4">Diego Armando</p>
-                </a>
-              </div>
-              <div class="item">
-                <a href="#" class="text-decoration-none">
-                  <div class="item-img">
-                    <img src="assets/img/fotor-ai-20240114185914-removebg-preview.png" alt="medico" class="w-100" />
-                  </div>
-                  <p class="fw-bold fs-4">Fernando Guerrero</p>
-                </a>
-              </div>
-              <div class="item">
-                <a href="#" class="text-decoration-none">
-                  <div class="item-img">
-                    <img src="assets/img/fotor-ai-20240114185845-removebg-preview.png" alt="guitar" class="w-100" />
-                  </div>
-                  <p class="fw-bold fs-4">Sofia Lopez</p>
-                </a>
-              </div>
-
-              <div class="item">
-                <a href="#" class="text-decoration-none">
-                  <div class="item-img">
-                    <img src="assets/img/fotor-ai-20240114185914-removebg-preview.png" alt="guitar" class="w-100" />
-                  </div>
-                  <p class="fw-bold fs-4">Alba Caraballo</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <section id="sect1" class="sect">
+    <video src="assets/video/doctor_-_26732 (Original).mp4" class="videoInicio" autoplay="true" muted="true" loop="true" ></video>
+    <h1 class="txtVideo">Todo por su <u><b>BIENESTAR</b></u></h1>
   </section>
   <!-- ACABA PRIMER SLIDER -->
   <script src="js/app.js"></script>

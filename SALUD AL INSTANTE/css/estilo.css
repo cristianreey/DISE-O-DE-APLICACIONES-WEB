@@ -342,3 +342,447 @@ footer div:first-child div:nth-child(4) {
     text-align: center;
   }
 } /*# sourceMappingURL=estilo.css.map */
+
+#search-menu-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+#search-menu {
+  padding: 20px;
+  color: #fff;
+}
+
+#search-menu-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+#search-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#search-menu input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#search-menu button {
+  width: 80%;
+  padding: 10px;
+  background-color: #4cacb3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+#search-menu button:hover {
+  background-color: #000000;
+}
+
+#close-search-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.reproductor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: inherit;
+  clear: left;
+  position: realtive;
+  gap: 5px;
+}
+
+.reproductor img {
+  width: 5%;
+}
+
+.sect {
+  width: 100%;
+  min-height: 500px;
+}
+#sect1 {
+  background-color: #c2c2c27d;
+  color: #000000;
+  position: relative;
+  overflow: hidden;
+}
+.videoInicio {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+.txtVideo {
+  margin: 0;
+  padding-top: 3rem;
+  padding-left: 2rem;
+}
+#content-consult {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#content-consult1 {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.citasMobile {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.cita {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fecha-hora,
+.medico,
+.especialidad {
+  margin: 8px 0;
+  color: #555;
+}
+
+.videoconsulta {
+  margin-top: 8px;
+}
+
+.videoconsulta img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.receta {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.receta .medicamento,
+.receta .medico,
+.receta .periodo,
+.receta .pautas {
+  margin: 8px 0;
+  color: #333;
+}
+
+.receta .descargar {
+  margin-top: 8px;
+}
+
+.receta img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.receta:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+#register-container {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4cacb3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+#login-link {
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+#login-link:hover {
+  color: #000000;
+}
+
+#login-container {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4cacb3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+#forgot-password,
+#register-link {
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+#forgot-password:hover,
+#register-link:hover {
+  color: #000000;
+}
+#login-container {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 50px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4cacb3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+#forgot-password,
+#register-link {
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+#forgot-password:hover,
+#register-link:hover {
+  color: #000000;
+}
+
+#search-menu-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+#search-menu {
+  padding: 20px;
+  color: #fff;
+}
+
+#search-menu-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+#search-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#search-menu input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#search-menu button {
+  width: 80%;
+  padding: 10px;
+  background-color: #4cacb3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+#search-menu button:hover {
+  background-color: #000000;
+}
+
+#close-search-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+/* Estilos para los videos */
+video {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Ajustes para la sección de elección de las consultas */
+section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+/* Estilo para los indicadores de puntos en negro */
+.black-dots li {
+  background-color: #000;
+}
+
+/* Estilo para el punto activo */
+.black-dots .active {
+  background-color: #000;
+}
+/* Estilo para los botones de control */
+.carousel-control-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.control-button {
+  background-color: #f9f9f9;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #0d595f;
+  margin: rgb(0, 0, 0) 0px;
+}
+
+.control-volume {
+  width: 100px;
+  margin: 0 10px;
+}
